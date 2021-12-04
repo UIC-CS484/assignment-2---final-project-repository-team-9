@@ -1,5 +1,10 @@
 # Assignment 2, Group 9
 
+## Members
+* Hector Cedeno-Indriago
+* Jonathan Chen
+* Bryan Emer
+
 ## Charting Library
 The data that will be displayed is from the Nomics API, which has all of the cryptocurrency information. On the web app, only the active currencies by their names, symbols, and their current prices will be displayed in a table that is sorted by rank.
 
