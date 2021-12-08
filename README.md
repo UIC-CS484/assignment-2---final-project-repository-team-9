@@ -1,9 +1,21 @@
-# Assignment 2, Group 9
+# Final Assignment, Group 9
 
 ## Members
 * Hector Cedeno-Indriago
 * Jonathan Chen
 * Bryan Emer
+
+## Project Summary
+This website is a cryptocurrency portfolio monitor. It allows users to input their account information and track selected cryptocurrencies. Users can also search through all available
+currencies to track prices. 
+
+# API Snippet
+axios.get('https://api.nomics.com/v1/currencies/ticker?key=2b128e6260e7cd4c7aa84266e91583748dfa6f47')
+    .then(function (response) {
+        for (var c in response.data) {
+            response.data[c].price = parseFloat(response.data[c].price).toFixed(2);
+        }
+        res.render('dashboard', {userInfo, currencies: response.data});
 
 ## Charting Library
 The data that will be displayed is from the Nomics API, which has all of the cryptocurrency information. On the web app, only the active currencies by their names, symbols, and their current prices will be displayed in a table that is sorted by rank.
